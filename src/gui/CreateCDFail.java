@@ -25,6 +25,7 @@ public class CreateCDFail extends JOptionPane {
 	public CreateCDFail(JFrame jf) {
 		super();
 		this.setSize(100, 100);
+		// REVIEW ein Fenster im Konstruktor anzuzeigen ist eine schlechte Idee, da es keine Möglichkeit mehr gibt diese Klasse ohne Oberfläche zu testen. Es wäre daher besser eine Methode anzubieten, mit der der Dialog angezeigt wird.
 		this.showMessageDialog(jf,"CD already exists in your library!", "CD save error", JOptionPane.ERROR_MESSAGE);
 	}
 }

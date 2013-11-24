@@ -34,7 +34,9 @@ public class SaveCDPersistent {
 		if(!this.persistenzMemory.lookForDuplicate(cd)){
 			this.persistenzMemory.save(cd);
 		} else {
+		    // REVIEW die Warnung hat durchaus einen Sinn. Da cdFail nicht verwendet wird, kann die Variable und damit die Zuweisung entfallen.
 			@SuppressWarnings("unused")
+			//REVIEW an dieser Stelle referenziert die businessLogic die gui, ein austauschen der GUI wird dadurch nur schwer möglich. Um der Architektur gerecht zu werden müsste die Methode save einen Rückgabewert haben, der dann von der GUI ausgewertetet wird. Das Äquivalent der folgenden Code Zeile müsste dann dort stehen.
 			CreateCDFail cdFail = new CreateCDFail(cdf);
 		}
 		

@@ -33,7 +33,7 @@ public class CreateCDForm extends JFrame {
 	public CreateCDForm(SaveCDPersistent scdp) {
 		this.saveCDPersistent = scdp;
 		this.setLayout(new GridLayout(3, 2));
-
+		// REVIEW die durch Leerzeilen getrennten Blöcke deuten darauf hin, dass hier Methoden extrahiert werden möchten.
 		this.titleLabel = new JLabel("Titel:");
 		this.add(this.titleLabel);
 		this.titleTextField = new JTextField();
